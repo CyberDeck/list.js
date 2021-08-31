@@ -11,6 +11,8 @@ module.exports = function (list) {
     list.reset.filter()
     if (filterFunction === undefined) {
       list.filtered = false
+    } else if ((filterFunction === null) && !list.filtered) {
+      list.filtered = false
     } else {
       if (filterFunction !== null) {
         currentFilterFunction = filterFunction

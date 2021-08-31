@@ -42,6 +42,8 @@ module.exports = function (list) {
 
     if (filterFunction === undefined) {
       list.filtered = false;
+    } else if (filterFunction === null && !list.filtered) {
+      list.filtered = false;
     } else {
       if (filterFunction !== null) {
         currentFilterFunction = filterFunction;
